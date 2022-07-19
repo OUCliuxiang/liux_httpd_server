@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wno-deprecated -Wno-unused-function -fpermissive  -rdynamic CMakeFiles/test_log.dir/test/test_log.cpp.o  -o ../bin/test_log -Wl,-rpath,/root/liux_httpd_server/lib ../lib/libliux_log.so -lpthread 

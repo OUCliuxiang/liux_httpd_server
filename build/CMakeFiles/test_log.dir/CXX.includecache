@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/blockingqueue.h
+queue
+-
+mutex
+-
+condition_variable
+-
+
+../include/helper.h
+string
+-
+
+../include/logger.h
+blockingqueue.h
+../include/blockingqueue.h
+helper.h
+../include/helper.h
+iostream
+-
+string
+-
+vector
+-
+
+/root/liux_httpd_server/test/test_log.cpp
+logger.h
+/root/liux_httpd_server/test/logger.h
+
