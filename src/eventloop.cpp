@@ -6,8 +6,8 @@
 #include <sys/epoll.h>
 
 #include <assert.h>
-
-
+#include <utility> // std::move() 右值引用
+ 
 void EventLoop::add_channel(Channel* channel) {
     channel_map[channel -> fd] = channel;
     TRACE("chanel add to EventLoop: " + std::to_string(channel -> fd));
@@ -24,7 +24,7 @@ void EventLoop::del_channel(Channel* channel) {
 }
 
 
-void Select::loop(ChannelList& channel_list) {
+void Select::loop() {
     fd_set rset; // 记录读事件的 fd_set 数组
     
     // 构造 rset 数组
@@ -47,9 +47,14 @@ void Select::loop(ChannelList& channel_list) {
             if (-- nready <= 0) break;
         }
     }
+
+    // 事件处理
+    for (auto& channel: channel_list) channel -> handle_event();
+    ChannelList tmp;
+    channel_list.swap(std::move(tmp));
 }
 
-void Poll::loop(ChannelList& channel_list) {
+void Poll::loop() {
     std::vector<struct pollfd> fd_array; // 记录读事件的 poll 结构体数组
     // 构造 fd_array 数组
     for (auto& x: channel_map) {
@@ -73,9 +78,13 @@ void Poll::loop(ChannelList& channel_list) {
         }
     }
 
+    // 事件处理
+    for (auto& channel: channel_list) channel -> handle_event();
+    ChannelList tmp;
+    channel_list.swap(std::move(tmp));
 }
 
-void Epoll::loop(ChannelList& channel_list) {
+void Epoll::loop() {
     int max_events = 1000;
     struct epoll_event ev, events(max_events);
 
@@ -104,6 +113,9 @@ void Epoll::loop(ChannelList& channel_list) {
 
     for (int i = 0; i < nready; i ++) 
         channel_list.push_back(channel_map[events[i].data.fd]);
+
+    // 事件处理
+    for (auto& channel: channel_list) channel -> handle_event();
+    ChannelList tmp;
+    channel_list.swap(std::move(tmp));
 } 
-
-

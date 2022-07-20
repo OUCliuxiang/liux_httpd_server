@@ -5,6 +5,8 @@
 #include <mutex>
 #include <condition_variable>
 
+// 一个线程安全的队列，每次操作前先加上独占锁
+
 using std::queue;
 using std::mutex;
 using std::condition_variable;
@@ -24,7 +26,7 @@ public:
     {
         std::unique_lock<std::mutex> lock(_mutex);
         _queue.push(v);
-        _cond.notify_one();
+        _cond.notify_one(); // 唤醒等待队列中的第一个线程
     }
     
     //

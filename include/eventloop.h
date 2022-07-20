@@ -13,7 +13,7 @@ class EventLoop {
 public:
     using ChannelList = std::vector<Channel*>;
 
-    explicit EventLoop(int listenfd): socketfd(listenfd) {}
+    explicit EventLoop(int listenfd): sockfd(listenfd) {}
     EventLoop(const EventLoop&) = delete;
     EventLoop& operator=(const EventLoop&) = delete;
 
@@ -26,8 +26,8 @@ public:
 
 
 protected:
-    int socketfd;
-    ChannelList* active_channel_list;
+    int sockfd;
+    ChannelList channel_list;
     std::map<int, Channel*> channel_map;       // fd --> channel 的映射
 };
 
@@ -35,21 +35,21 @@ protected:
 // select IO 多路复用
 class Select: public EventLoop {
 public:
-    virtual void loop(ChannelList& channel_list) override;
+    virtual void loop() override;
 };
 
 
 // poll IO 多路复用
 class Poll: public EventLoop {
 public:
-    virtual void loop(ChannelList& channel_list) override;
+    virtual void loop() override;
 };
 
 
 // epoll IO 多路复用    
 class Epoll: public EventLoop {
 public:
-    virtual void loop(ChannelList& channel_list) override;
+    virtual void loop() override;
 };
 
 #endif

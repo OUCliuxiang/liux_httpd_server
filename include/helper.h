@@ -34,6 +34,9 @@ namespace Helper
     // random-string = Hash(time-string ":" private-key)
     //
     string random_string(int second);
+
+    // 计时器
+    int timerfd_create(int second);
 }
 
 #endif

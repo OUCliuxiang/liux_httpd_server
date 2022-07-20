@@ -26,6 +26,7 @@ void Logger::destroy() {
         delete p;
 }
 
+// 这个函数将会单独开一个线程运行，只要阻塞队列里有数据，就立刻输出
 void Logger::thread_func() {
     while(true) {
         const string& msg = _queue.front();

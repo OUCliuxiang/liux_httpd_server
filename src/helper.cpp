@@ -2,9 +2,12 @@
 
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <sys/timerfd.h>
 #include <unistd.h>
 #include <assert.h>
 #include <time.h>
+#include <string.h>
+
 
 #include <iostream>
 #include <chrono>
@@ -145,4 +148,15 @@ bool Helper::urlUnderRootDir(const string& url)
     }
     
     return true;
+}
+
+
+int Helper::timerfd_create(int second) {
+    struct itimerspec howlong;
+    bzero(&howlong, sizeof(howlong));
+    howlong.it_value.tv_sec = second;
+
+    int timerfd = ::timerfd_create(CLOCK_REALTIME, 0);
+    ::timerfd_settime(timerfd, 0, &howlong, NULL);
+    return timerfd;
 }
