@@ -101,7 +101,9 @@ void Epoll::loop(ChannelList& channel_list) {
         ERROR("epoll_wait failed");
         exit(1);
     }
-    
+
+    for (int i = 0; i < nready; i ++) 
+        channel_list.push_back(channel_map[events[i].data.fd]);
 } 
 
 
