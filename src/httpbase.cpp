@@ -55,7 +55,7 @@ map<HttpBase::HttpStatusCode, string> HttpBase::status_to_str_map = {
     {HttpBase::HttpStatusCode::s301, "301 Moved Premanently"}, 
     {HttpBase::HttpStatusCode::s400, "400 Bad Request"},
     {HttpBase::HttpStatusCode::s401, "401 Authorization Required"},
-    {HttpBase::HttpStatusCode::s404, "40 Not Found"},
+    {HttpBase::HttpStatusCode::s404, "404 Not Found"},
     {HttpBase::HttpStatusCode::s500, "500 Internal Servre Error"},
     {HttpBase::HttpStatusCode::s501, "501 Not Implemented"}
 };
