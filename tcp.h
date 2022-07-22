@@ -14,7 +14,7 @@
 #include <list>
 #include <map>
 
-template<typename Protocol, typename IOMulti> // 目前只实现了 Http 协议
+template<typename Protocol, typename Multi> // 目前只实现了 Http 协议
 class TcpServer {
 public:
     using callback = std::function<void()>;

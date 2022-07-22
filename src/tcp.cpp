@@ -11,6 +11,7 @@ void TcpServer::run() {
     std::thread log_thread(Logger::thread_func);
     // 日志子线程剥离出主线程而独自运行
     log_thread.detach();
+    // 创建线程池，开始运行
     make_threads();
     while(1) pause();
 }
@@ -118,6 +119,34 @@ void TcpSerevr::listen_channel(int listenfd, EventLoop* eventloop) {
             handle(connfd);
         });
         eventloop -> add_channel(connect_channel);
-        
+
+        Channel* timer_channel = new Channel(timerfd);
+        timer_channel -> set_enable_reading();
+        timer_channel -> set_read_callback(()[=]{
+            closing_list[eventloop].push_back(connect_channel);
+            closing_list[eventloop].push_back(timer_channel);
+            INFO("connection close: " + std::to_string(connfd));
+        });
+        eventloop -> add_channel(timer_channel);
     });
+    eventloop -> add_channel(channel);
+}
+
+void TcpServer::loop(EventLoop& eventloop) {
+    while (true) {
+        eventloop -> loop();
+        clean_channel(eventloop);
+    }
+} 
+
+
+void TcpServer::clean_channel(EventLoop* eventloop) {
+    for (auto it: closing_list[eventloop].begin(); 
+    it != closing_list[eventloop].end(); ) {
+        Channel* channel = (*it);
+        it = closing_list[eventloop].erase(it);
+        eventloop -> del_channel(channel);
+        close(channel -> get_fd());
+        delete channel;
+    }
 }
