@@ -62,7 +62,7 @@ public:
     }
 
     void add_header(const char* start, const char* end);
-    inline std::string get_header(const std::string& key);
+    std::string get_header(const std::string& key);
 
     inline void append_to_body(const std::string& content) {
         body.append(content);
