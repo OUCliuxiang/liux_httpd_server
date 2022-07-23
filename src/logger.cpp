@@ -7,7 +7,7 @@
 using namespace std;
 
 char Logger::seperator = '|';
-int Logger::_curruct_level = TRACE;
+int Logger::_curruct_level = LTRACE;
 ostream& Logger::_output(cerr); // 初始化到标准错误 
 
 vector<string> Logger::_strLevelMap = {"TRACE", "DEBUG", "INFO", "WARN", "ERROR"};
@@ -15,7 +15,7 @@ vector<Logger*> Logger::_instances(LEVEL_SIZE, nullptr);
 BlockingQueue<string> Logger::_queue;
 
 Logger* Logger::instance(int level) {
-    assert(level > 0 && level < LEVEL_SIZE);
+    assert(level >= 0 && level <= LEVEL_SIZE);
     if (Logger::_instances[level] == nullptr) 
         Logger::_instances[level] = new Logger(level);
     return Logger::_instances[level];

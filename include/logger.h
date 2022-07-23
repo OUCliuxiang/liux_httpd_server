@@ -9,18 +9,18 @@
 
 #define LEVEL_SIZE  5
 
-#define TRACE   0
-#define DEBUG   1
-#define INFO    2
-#define WARN    3
-#define ERROR   4
+#define LTRACE   0
+#define LDEBUG   1
+#define LINFO    2
+#define LWARN    3
+#define LERROR   4
 
 
-#define TRACE(content)  Logger::instance(TRACE) -> logging(__FILE__, __LINE__, content)
-#define DEBUG(content)  Logger::instance(DEBUG) -> logging(__FILE__, __LINE__, content)
-#define INFO(content)   Logger::instance(INFO) -> logging(__FILE__, __LINE__, content)
-#define WARN(content)   Logger::instance(WARN) -> logging(__FILE__, __LINE__, content)
-#define ERROR(content)  Logger::instance(ERROR) -> logging(__FILE__, __LINE__, content)
+#define TRACE(content)  Logger::instance(LTRACE) -> logging(__FILE__, __LINE__, content)
+#define DEBUG(content)  Logger::instance(LDEBUG) -> logging(__FILE__, __LINE__, content)
+#define INFO(content)   Logger::instance(LINFO) -> logging(__FILE__, __LINE__, content)
+#define WARN(content)   Logger::instance(LWARN) -> logging(__FILE__, __LINE__, content)
+#define ERROR(content)  Logger::instance(LERROR) -> logging(__FILE__, __LINE__, content)
 
 //
 // 日志类

@@ -1,5 +1,7 @@
 #include "logger.h"
+#include <sys/time.h>
 #include <thread>
+#include <unistd.h>
 
 using namespace std;
 
@@ -11,23 +13,38 @@ void write_logging()
 
 void trace()
 {
-    while (1)   TRACE("trace_test");
+    while (1)   {
+        TRACE("trace_test");
+        sleep(1);
+    }
 }
 void debug()
 {
-    while (1)   DEBUG("debug_test");
+    while (1)   {
+        DEBUG("debug_test");
+        sleep(1);
+    }
 }
 void info()
 {
-    while (1)   INFO("info_test");
+    while (1)   {
+        INFO("info_test");
+        sleep(1);
+    }
 }
 void warn()
 {
-    while (1)   WARN("warn_test");
+    while (1)   {
+        WARN("warn_test");
+        sleep(1);
+    }
 }
 void error()
 {
-    while (1)   ERROR("error_test");
+    while (1)   {
+        ERROR("error_test");
+        sleep(1);
+    }
 }
 
 
@@ -76,7 +93,6 @@ int main(int ac, char** av)
 {
     test();
     
-    while (1)
-        pause();
+    while (1)   sleep(1000);
     return 0;
 }

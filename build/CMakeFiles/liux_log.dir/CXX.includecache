@@ -37,11 +37,15 @@ sys/types.h
 -
 sys/socket.h
 -
+sys/timerfd.h
+-
 unistd.h
 -
 assert.h
 -
 time.h
+-
+string.h
 -
 iostream
 -

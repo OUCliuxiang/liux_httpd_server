@@ -4,7 +4,7 @@
 
 #include <string.h>
 #include <unistd.h>
-#include <stdlib.h>
+#include <stdlib.h> // pause()
 
 void TcpServer::run() {
     // 日志单独一个线程
