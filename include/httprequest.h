@@ -36,33 +36,33 @@ public:
         body() {}
     
     void set_method(const char* start, const char* end);
-    inline HttpMethod get_method() {
+    inline HttpMethod get_method() const {
         return method;
     }
-    inline std::string get_str_method() {
+    inline std::string get_str_method() const {
         return method_to_str_map[method];
     }
 
     void set_version(const char* start, const char* end);
-    inline HttpVersion get_version() {
+    inline HttpVersion get_version() const {
         return version;
     }
-    inline std::string get_str_version() {
+    inline std::string get_str_version() const {
         return version_to_str_map[version];
     }
 
     void set_path(const char* start, const char* end);
-    inline std::string get_path() {
+    inline std::string get_path() const {
         return path;
     }
 
     void set_query(const char* start, const char* end);
-    inline std::string get_query() {
+    inline std::string get_query() const {
         return query;
     }
 
     void add_header(const char* start, const char* end);
-    std::string get_header(const std::string& key);
+    std::string get_header(const std::string& key) const;
 
     inline void append_to_body(const std::string& content) {
         body.append(content);
@@ -71,7 +71,7 @@ public:
         body.append(start, end);
     }
 
-    inline const std::string& get_body() {
+    inline const std::string& get_body() const {
         return body;
     }
     
