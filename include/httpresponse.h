@@ -10,6 +10,9 @@
 class HttpResponse: public HttpBase {
 
 public:
+
+    using ptr = std::shared_ptr<HttpResponse>;
+
     HttpResponse(): 
         version(HttpVersion::v11), 
         status_code(HttpStatusCode::unknown),
@@ -22,7 +25,7 @@ public:
         headers(),
         body() {}
     
-    inline void set_status(int code) {
+    inline void set_status_code(int code) {
         status_code = static_cast<HttpStatusCode>(code); 
     }
 

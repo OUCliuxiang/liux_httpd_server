@@ -1,12 +1,14 @@
 #ifndef __EXCEPTION_H__
 #define __EXCEPTION_H__
 
+#include <memory>
 #include <string>
 using std::string;
 
 class BaseException
 {
 public:
+    using ptr = std::shared_ptr<BaseException>;
     BaseException(const string& f, int l, const string& e):
         filename(f),
         line_num(l),

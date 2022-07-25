@@ -33,7 +33,7 @@ void HttpResponse::print(std::ostream& os) {
     for (; current != end; ++current) {
         if (*current == '\r' && *(current+1) == '\n') {
             os << "<";
-            os << string(beg, current+2);
+            os << std::string(begin, current+2);
             if (begin == current) break;
             else begin = current + 2;
         }

@@ -4,9 +4,11 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <memory>
 
 class HttpBase {
 public:
+    using ptr = std::shared_ptr<HttpBase>;
     // http root dir
     static std::string HTTP_ROOT_DIR;
     // http method
@@ -42,7 +44,7 @@ public:
     static std::vector<char> url_charset;
 
     // set void set_root_dir
-    static set_void_dir(const std::string& dir) {
+    static void set_root_dir(const std::string& dir) {
         HTTP_ROOT_DIR = dir;
     }
 

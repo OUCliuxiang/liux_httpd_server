@@ -1,7 +1,7 @@
 #ifndef __HTTPREQUEST_H__
 #define __HTTPREQUEST_H__
 
-#include "HttpBase.h"
+#include "httpbase.h"
 #include <string>
 #include <map>
 #include <iostream>
@@ -9,6 +9,7 @@
 class HttpRequest: public HttpBase {
 
 public:
+    using ptr = std::shared_ptr<HttpRequest>;
     
     HttpRequest():
         method(HttpMethod::unknown),
@@ -27,7 +28,7 @@ public:
         body() {}
 
     HttpRequest(HttpMethod _method, HttpVersion _version , 
-                const std::string& _path, const std::stirng& _query):
+                const std::string& _path, const std::string& _query):
         method(_method),
         version(_version),
         path(_path),
@@ -39,7 +40,7 @@ public:
     inline HttpMethod get_method() const {
         return method;
     }
-    inline std::string get_str_method() const {
+    inline const std::string& get_str_method() const {
         return method_to_str_map[method];
     }
 
@@ -47,27 +48,31 @@ public:
     inline HttpVersion get_version() const {
         return version;
     }
-    inline std::string get_str_version() const {
+    inline const std::string& get_str_version() const {
         return version_to_str_map[version];
     }
 
-    void set_path(const char* start, const char* end);
-    inline std::string get_path() const {
+    inline void set_path(const char* start, const char* end) {
+        path.assign(start, end);
+    }
+    inline const std::string& get_path() const {
         return path;
     }
 
-    void set_query(const char* start, const char* end);
-    inline std::string get_query() const {
+    inline void set_query(const char* start, const char* end) {
+        query.assign(start, end);
+    }
+    inline const std::string& get_query() const {
         return query;
     }
 
     void add_header(const char* start, const char* end);
-    std::string get_header(const std::string& key) const;
+    const std::string& get_header(const std::string& key) const;
 
     inline void append_to_body(const std::string& content) {
         body.append(content);
     }
-    inline void append_to_body(const char* strat, const char* end) {
+    inline void append_to_body(const char* start, const char* end) {
         body.append(start, end);
     }
 

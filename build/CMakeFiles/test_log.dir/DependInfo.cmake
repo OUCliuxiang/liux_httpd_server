@@ -16,6 +16,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/root/liux_httpd_server/build/CMakeFiles/liux_log.dir/DependInfo.cmake"
+  "/root/liux_httpd_server/build/CMakeFiles/liux_tcp.dir/DependInfo.cmake"
+  "/root/liux_httpd_server/build/CMakeFiles/liux_http.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

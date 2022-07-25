@@ -34,19 +34,19 @@ map<string, HttpBase::HttpMethod> HttpBase::str_to_method_map = {
 };
 
 map<HttpBase::HttpVersion, string> HttpBase::version_to_str_map = {
-    {HttpBase::Version::unknown, ""},
-    {HttpBase::Version::v09, "HTTP/0.9"},
-    {HttpBase::Version::v10, "HTTP/1.0"},
-    {HttpBase::Version::v11, "HTTP/1.1"},
-    {HttpBase::Version::v20, "HTTP/2.0"}
+    {HttpBase::HttpVersion::unknown, ""},
+    {HttpBase::HttpVersion::v09, "HTTP/0.9"},
+    {HttpBase::HttpVersion::v10, "HTTP/1.0"},
+    {HttpBase::HttpVersion::v11, "HTTP/1.1"},
+    {HttpBase::HttpVersion::v20, "HTTP/2.0"}
 };
 
 map<string, HttpBase::HttpVersion> HttpBase::str_to_version_map = {
-    {"", HttpBase::Version::unknown},
-    {"HTTP/0.9", HttpBase::Version::v09},
-    {"HTTP/1.0", HttpBase::Version::v10},
-    {"HTTP/1.1", HttpBase::Version::v11},
-    {"HTTP/2.0", HttpBase::Version::v20}
+    {"", HttpBase::HttpVersion::unknown},
+    {"HTTP/0.9", HttpBase::HttpVersion::v09},
+    {"HTTP/1.0", HttpBase::HttpVersion::v10},
+    {"HTTP/1.1", HttpBase::HttpVersion::v11},
+    {"HTTP/2.0", HttpBase::HttpVersion::v20}
 };
 
 map<HttpBase::HttpStatusCode, string> HttpBase::status_to_str_map = {

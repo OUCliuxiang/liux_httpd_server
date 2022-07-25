@@ -15,13 +15,6 @@ void HttpRequest::set_version(const char* start, const char* end) {
               HttpVersion::unknown : it -> second;
 }
 
-void HttpRequest::set_path(const char* start, const char* end) {
-    path.assign(start, end);
-}
-
-void HttpRequest::set_query(const char* start, const char* end) {
-    query.assign(start, end);
-}
 
 void HttpRequest::add_header(const char* start, const char* end) {
     const char* p = std::find(start, end, ':');
@@ -36,7 +29,7 @@ void HttpRequest::add_header(const char* start, const char* end) {
     headers[key] = value;
 }
 
-std::string HttpRequest::get_header(const std::string& key) {
+const std::string& HttpRequest::get_header(const std::string& key) const {
     std::string result;
     auto it = headers.find(key);
     if (it != headers.end())
@@ -45,9 +38,9 @@ std::string HttpRequest::get_header(const std::string& key) {
 } 
 
 void HttpRequest::print(std::ostream& os) {
-    os << ">" << method_to_str_map[mehtod];
+    os << ">" << method_to_str_map[method];
     os << " " << path;
-    if (query.size()) os << "?" query;
+    if (query.size()) os << "?" << query;
     os << " ";
 
     os << get_str_version() << "\r\n";

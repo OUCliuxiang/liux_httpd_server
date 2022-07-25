@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wno-deprecated -Wno-unused-function -fpermissive  -rdynamic CMakeFiles/main.dir/main.cpp.o  -o ../bin/main -Wl,-rpath,/root/liux_httpd_server/lib ../lib/libliux_log.so ../lib/libliux_tcp.so ../lib/libliux_http.so -lpthread 

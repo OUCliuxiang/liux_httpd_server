@@ -3,6 +3,7 @@
 
 #include <queue>
 #include <mutex>
+#include <memory>
 #include <condition_variable>
 
 // 一个线程安全的队列，每次操作前先加上独占锁
@@ -15,6 +16,8 @@ template <typename T>
 class BlockingQueue
 {
 public:
+    using ptr = std::shared_ptr<BlockingQueue>;
+
     BlockingQueue() = default;
     BlockingQueue(const BlockingQueue&) = delete;
     BlockingQueue& operator=(const BlockingQueue&) = delete;

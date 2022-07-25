@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -Wno-deprecated -Wno-unused-function -fpermissive  -shared -Wl,-soname,libliux_tcp.so -o ../lib/libliux_tcp.so CMakeFiles/liux_tcp.dir/src/tcp.cpp.o CMakeFiles/liux_tcp.dir/src/logger.cpp.o CMakeFiles/liux_tcp.dir/src/helper.cpp.o CMakeFiles/liux_tcp.dir/src/eventloop.cpp.o 

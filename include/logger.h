@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory>
 
 #define LEVEL_SIZE  5
 
@@ -28,13 +29,16 @@
 class Logger
 {
 public:
+    using ptr = std::shared_ptr<Logger>;
+
     Logger(const Logger&) = delete;
     Logger& operator=(const Logger&) = delete;
     // 每个级别一个实例。
-    static Logger* instance(int level);
+    static ptr instance(int level);
     
     // 回收内存
-    static void destroy();
+    // 使用智能指针，这个不需要了
+    // static void destroy();
     
     // 执行实际的写日志操作,在独立的线程中调用
     static void thread_func();
@@ -62,11 +66,12 @@ private:
     static char seperator;              // 日志分隔符
     static int _curruct_level;          // 当前日志级别，用作过滤阈值
     static std::ostream& _output;       // 日志输出流
+    // static std::ofstream& _output_file; // 日志输出文件
     
     // 级别到字符串的映射表
     static std::vector<std::string> _strLevelMap;   
     // 实例数组，每个级别一个实例
-    static std::vector<Logger*> _instances;
+    static std::vector<ptr> _instances;
     // 阻塞队列
     static BlockingQueue<std::string> _queue;            
     

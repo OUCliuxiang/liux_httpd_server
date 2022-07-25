@@ -11,6 +11,8 @@ queue
 -
 mutex
 -
+memory
+-
 condition_variable
 -
 
@@ -28,6 +30,8 @@ iostream
 string
 -
 vector
+-
+memory
 -
 
 /root/liux_httpd_server/src/helper.cpp
@@ -64,5 +68,7 @@ assert.h
 string
 -
 pthread.h
+-
+fstream
 -
 

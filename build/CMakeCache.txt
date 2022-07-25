@@ -181,6 +181,9 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Dependencies for target
+liux_http_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 liux_httpd_BINARY_DIR:STATIC=/root/liux_httpd_server/build
 
@@ -189,6 +192,9 @@ liux_httpd_SOURCE_DIR:STATIC=/root/liux_httpd_server
 
 //Dependencies for target
 liux_log_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+liux_tcp_LIB_DEPENDS:STATIC=
 
 
 ########################

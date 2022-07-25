@@ -3,9 +3,11 @@
 
 #include <string>
 #include <time.h>
+#include <memory>
 
 class StrTime {
 public:
+    using ptr = std::shared_ptr<StrTime>;
     StrTime() {
         ::time(&rawtime);
         timeinfo = localtime(&rawtime);
