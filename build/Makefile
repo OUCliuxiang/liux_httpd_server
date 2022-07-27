@@ -114,30 +114,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named maind
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+maind: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 maind
+.PHONY : maind
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named liux_http
-
-# Build rule for target.
-liux_http: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 liux_http
-.PHONY : liux_http
-
-# fast build rule for target.
-liux_http/fast:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/build
-.PHONY : liux_http/fast
+maind/fast:
+	$(MAKE) -f CMakeFiles/maind.dir/build.make CMakeFiles/maind.dir/build
+.PHONY : maind/fast
 
 #=============================================================================
 # Target rules for targets named liux_log
@@ -171,7 +158,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/maind.dir/build.make CMakeFiles/maind.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -180,7 +167,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/maind.dir/build.make CMakeFiles/maind.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -189,7 +176,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/maind.dir/build.make CMakeFiles/maind.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/eventloop.o: src/eventloop.cpp.o
@@ -225,7 +212,6 @@ src/helper.o: src/helper.cpp.o
 
 # target to build an object file
 src/helper.cpp.o:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/helper.cpp.o
 	$(MAKE) -f CMakeFiles/liux_log.dir/build.make CMakeFiles/liux_log.dir/src/helper.cpp.o
 	$(MAKE) -f CMakeFiles/liux_tcp.dir/build.make CMakeFiles/liux_tcp.dir/src/helper.cpp.o
 .PHONY : src/helper.cpp.o
@@ -236,7 +222,6 @@ src/helper.i: src/helper.cpp.i
 
 # target to preprocess a source file
 src/helper.cpp.i:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/helper.cpp.i
 	$(MAKE) -f CMakeFiles/liux_log.dir/build.make CMakeFiles/liux_log.dir/src/helper.cpp.i
 	$(MAKE) -f CMakeFiles/liux_tcp.dir/build.make CMakeFiles/liux_tcp.dir/src/helper.cpp.i
 .PHONY : src/helper.cpp.i
@@ -247,118 +232,9 @@ src/helper.s: src/helper.cpp.s
 
 # target to generate assembly for a file
 src/helper.cpp.s:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/helper.cpp.s
 	$(MAKE) -f CMakeFiles/liux_log.dir/build.make CMakeFiles/liux_log.dir/src/helper.cpp.s
 	$(MAKE) -f CMakeFiles/liux_tcp.dir/build.make CMakeFiles/liux_tcp.dir/src/helper.cpp.s
 .PHONY : src/helper.cpp.s
-
-src/http.o: src/http.cpp.o
-
-.PHONY : src/http.o
-
-# target to build an object file
-src/http.cpp.o:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/http.cpp.o
-.PHONY : src/http.cpp.o
-
-src/http.i: src/http.cpp.i
-
-.PHONY : src/http.i
-
-# target to preprocess a source file
-src/http.cpp.i:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/http.cpp.i
-.PHONY : src/http.cpp.i
-
-src/http.s: src/http.cpp.s
-
-.PHONY : src/http.s
-
-# target to generate assembly for a file
-src/http.cpp.s:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/http.cpp.s
-.PHONY : src/http.cpp.s
-
-src/httpbase.o: src/httpbase.cpp.o
-
-.PHONY : src/httpbase.o
-
-# target to build an object file
-src/httpbase.cpp.o:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/httpbase.cpp.o
-.PHONY : src/httpbase.cpp.o
-
-src/httpbase.i: src/httpbase.cpp.i
-
-.PHONY : src/httpbase.i
-
-# target to preprocess a source file
-src/httpbase.cpp.i:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/httpbase.cpp.i
-.PHONY : src/httpbase.cpp.i
-
-src/httpbase.s: src/httpbase.cpp.s
-
-.PHONY : src/httpbase.s
-
-# target to generate assembly for a file
-src/httpbase.cpp.s:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/httpbase.cpp.s
-.PHONY : src/httpbase.cpp.s
-
-src/httprequest.o: src/httprequest.cpp.o
-
-.PHONY : src/httprequest.o
-
-# target to build an object file
-src/httprequest.cpp.o:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/httprequest.cpp.o
-.PHONY : src/httprequest.cpp.o
-
-src/httprequest.i: src/httprequest.cpp.i
-
-.PHONY : src/httprequest.i
-
-# target to preprocess a source file
-src/httprequest.cpp.i:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/httprequest.cpp.i
-.PHONY : src/httprequest.cpp.i
-
-src/httprequest.s: src/httprequest.cpp.s
-
-.PHONY : src/httprequest.s
-
-# target to generate assembly for a file
-src/httprequest.cpp.s:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/httprequest.cpp.s
-.PHONY : src/httprequest.cpp.s
-
-src/httpresponse.o: src/httpresponse.cpp.o
-
-.PHONY : src/httpresponse.o
-
-# target to build an object file
-src/httpresponse.cpp.o:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/httpresponse.cpp.o
-.PHONY : src/httpresponse.cpp.o
-
-src/httpresponse.i: src/httpresponse.cpp.i
-
-.PHONY : src/httpresponse.i
-
-# target to preprocess a source file
-src/httpresponse.cpp.i:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/httpresponse.cpp.i
-.PHONY : src/httpresponse.cpp.i
-
-src/httpresponse.s: src/httpresponse.cpp.s
-
-.PHONY : src/httpresponse.s
-
-# target to generate assembly for a file
-src/httpresponse.cpp.s:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/httpresponse.cpp.s
-.PHONY : src/httpresponse.cpp.s
 
 src/logger.o: src/logger.cpp.o
 
@@ -366,7 +242,6 @@ src/logger.o: src/logger.cpp.o
 
 # target to build an object file
 src/logger.cpp.o:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/logger.cpp.o
 	$(MAKE) -f CMakeFiles/liux_log.dir/build.make CMakeFiles/liux_log.dir/src/logger.cpp.o
 	$(MAKE) -f CMakeFiles/liux_tcp.dir/build.make CMakeFiles/liux_tcp.dir/src/logger.cpp.o
 .PHONY : src/logger.cpp.o
@@ -377,7 +252,6 @@ src/logger.i: src/logger.cpp.i
 
 # target to preprocess a source file
 src/logger.cpp.i:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/logger.cpp.i
 	$(MAKE) -f CMakeFiles/liux_log.dir/build.make CMakeFiles/liux_log.dir/src/logger.cpp.i
 	$(MAKE) -f CMakeFiles/liux_tcp.dir/build.make CMakeFiles/liux_tcp.dir/src/logger.cpp.i
 .PHONY : src/logger.cpp.i
@@ -388,7 +262,6 @@ src/logger.s: src/logger.cpp.s
 
 # target to generate assembly for a file
 src/logger.cpp.s:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/src/logger.cpp.s
 	$(MAKE) -f CMakeFiles/liux_log.dir/build.make CMakeFiles/liux_log.dir/src/logger.cpp.s
 	$(MAKE) -f CMakeFiles/liux_tcp.dir/build.make CMakeFiles/liux_tcp.dir/src/logger.cpp.s
 .PHONY : src/logger.cpp.s
@@ -428,8 +301,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
-	@echo "... liux_http"
+	@echo "... maind"
 	@echo "... liux_log"
 	@echo "... liux_tcp"
 	@echo "... main.o"
@@ -441,18 +313,6 @@ help:
 	@echo "... src/helper.o"
 	@echo "... src/helper.i"
 	@echo "... src/helper.s"
-	@echo "... src/http.o"
-	@echo "... src/http.i"
-	@echo "... src/http.s"
-	@echo "... src/httpbase.o"
-	@echo "... src/httpbase.i"
-	@echo "... src/httpbase.s"
-	@echo "... src/httprequest.o"
-	@echo "... src/httprequest.i"
-	@echo "... src/httprequest.s"
-	@echo "... src/httpresponse.o"
-	@echo "... src/httpresponse.i"
-	@echo "... src/httpresponse.s"
 	@echo "... src/logger.o"
 	@echo "... src/logger.i"
 	@echo "... src/logger.s"

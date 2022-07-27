@@ -7,7 +7,7 @@
 #include <assert.h>
 #include <time.h>
 #include <string.h>
-
+#include <stdio.h>
 
 #include <iostream>
 #include <chrono>
@@ -18,7 +18,7 @@
 //
 // 读取一行数据
 //
-int Helper::readline(int fd, char *buf, int size)
+ssize_t Helper::readline(int fd, char *buf, int size)
 {
     int n, rc;
     char c, *ptr;
@@ -46,8 +46,9 @@ int Helper::readline(int fd, char *buf, int size)
 
     *ptr++ = '\n';
     *ptr = '\0';
+    printf("%s", buf);
     
-    //std::cout << (ptr-buf) / sizeof(char*) << std::endl;
+    // std::cout << (ptr-buf) / sizeof(char*) << std::endl;
     return (ptr-buf);
 }
 
@@ -159,4 +160,14 @@ int Helper::timerfd_create(int second) {
     int timerfd = ::timerfd_create(CLOCK_REALTIME, 0);
     ::timerfd_settime(timerfd, 0, &howlong, NULL);
     return timerfd;
+}
+
+string Helper::now_time(const char* format) {
+    time_t rawtime;
+    ::time(&rawtime);
+    struct tm* timeinfo;
+    timeinfo = localtime(&rawtime);
+    char buf[64];
+    strftime(buf, sizeof(buf), format, timeinfo);
+    return string(buf);
 }

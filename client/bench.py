@@ -53,7 +53,7 @@ class ClientThread(threading.Thread):
         conn_time = time.time()
 
         self.send_data_1(client, f'{self.name}: hello python')
-        self.send_data(client, f'{self.name}: so far so good!')
+        self.send_data_2(client, f'{self.name}: so far so good!')
 
         # 请求响应消耗的时间
         resp_time = time.time()
@@ -87,7 +87,7 @@ def str_to_time(time_str):
 
 
 def stat(log_file):
-    total = 0
+    total = 1
     total_time = 0
     total_conn_time = 0
     total_req_time = 0

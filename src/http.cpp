@@ -99,6 +99,7 @@ void Http::accept_request() {
     http_request.print(std::cout);
 
     // out_file.close();
+
 }
 
 
@@ -178,6 +179,7 @@ void Http::send_response() {
     StrTime now;
     // Weekday, day month year hour:min:second area
     http_response.add_header("Date", now.to_string("%a, %d %b %Y %H:%M:%S %Z"));
+    /*
     const string& body = http_response.get_body();
 
     if (!body.empty()) 
@@ -187,11 +189,11 @@ void Http::send_response() {
     if (http_request.get_method() == HttpMethod::head)
         buf = http_response.to_string_without_body();
     else buf = http_response.to_string();
-
+*/
     write(connfd, buf.data(), buf.size());
 }
 
-const std::string& Http::absolute_path() {
+const std::string Http::absolute_path() {
     return HttpBase::HTTP_ROOT_DIR + http_request.get_path();
 }
 

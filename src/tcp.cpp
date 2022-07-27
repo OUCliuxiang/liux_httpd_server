@@ -1,9 +1,11 @@
 #include "tcp.h"
 #include "logger.h"
 #include "helper.h"
-#include "http.h"
-#include <stdio.h>
+// #include "http.h"
+// #include "strtime.h"
 
+#include <signal.h> // 用于屏蔽客户端断开导致服务端自动断开的信号
+#include <stdio.h>
 #include <thread>
 #include <string.h>
 #include <unistd.h> // close()
@@ -70,8 +72,36 @@ int TcpServer::setup(int _port) {
 
 void TcpServer::handle(int connfd) {
     INFO("new request: " + std::to_string(connfd));
-    Http::ptr http(new Http(connfd)); // 目前只实现了 http 协议    
-    http -> handle();
+    // Http::ptr http(new Http(connfd)); // 目前只实现了 http 协议    
+    // http -> handle();
+
+    // receive
+    char buf[2048];
+    // 在 connfd 连接符读数据 
+    // TRACE("trace");
+    ssize_t n = ::read(connfd, buf, sizeof(buf));
+    // printf("trace\n");
+    if (n > 0)
+        INFO("message received: " + std::string(buf));
+    else {
+        // ERROR("message recv failed");
+        signal(SIGPIPE, SIG_IGN);
+        // close(connfd);
+        return;
+    }
+    // response
+    std::string resp;
+    resp += "This is a response for " + std::string(buf, n) +
+            ", we use " + iomulti + " as io multi basic.\n";
+    resp.append(Helper::now_time("%a, %d %b %Y %H:%M:%S %Z")); 
+    // Weekday, day month year hour:min:second area
+
+    n = ::send(connfd, resp.data(), resp.size(), 0);
+    if (n < 0) {
+        ERROR("message send failed");
+        signal(SIGPIPE, SIG_IGN);
+        return;
+    }
 }
 
 // 线程池，将每一个 Loop 作为单独一个线程剥离出去，抢占式调度
@@ -81,7 +111,8 @@ void TcpServer::make_threads() {
     for (int i = 0; i < threads; i++) {
         // EventLoop::ptr eventloop(nullptr);
         if (iotype == 0) {
-            Select::ptr eventloop(new Select());
+            iomulti = "select";
+            EventLoop::ptr eventloop(new Select());
             eventloop -> set_sockfd(sockfd);
             closing_list[eventloop] = std::list<Channel::ptr>();
 
@@ -92,8 +123,9 @@ void TcpServer::make_threads() {
             loop_thread.detach();
         }
 
-        else if (iotype == 1) {
-            Poll::ptr eventloop(new Poll());
+        else if (iotype == 1) {            
+            iomulti = "poll";
+            EventLoop::ptr eventloop(new Poll());
             eventloop -> set_sockfd(sockfd);
             closing_list[eventloop] = std::list<Channel::ptr>();
 
@@ -105,7 +137,8 @@ void TcpServer::make_threads() {
         }
         
         else if (iotype == 2) {
-            Epoll::ptr eventloop(new Epoll());
+            iomulti = "epoll";
+            EventLoop::ptr eventloop(new Epoll());
             eventloop -> set_sockfd(sockfd);
             closing_list[eventloop] = std::list<Channel::ptr>();
 
@@ -153,7 +186,7 @@ void TcpServer::listen_channel(int listenfd, EventLoop::ptr eventloop) {
               client_addr + ":" + std::to_string(cliaddr.sin_port));
         
         // 10 秒计时器
-        int timerfd = Helper::timerfd_create(10);
+        int timerfd = Helper::timerfd_create(1);
 
         Channel::ptr connect_channel(new Channel(connfd));
         connect_channel -> set_enable_reading();
@@ -177,8 +210,13 @@ void TcpServer::listen_channel(int listenfd, EventLoop::ptr eventloop) {
 
 void TcpServer::loop(EventLoop::ptr eventloop) {
     while (true) {
+        printf("1 %s\n", (Helper::now_time("%a, %d %b %Y %H:%M:%S %Z")).c_str());
         eventloop -> loop();
+        // sleep(1);
+        printf("2 %s\n", (Helper::now_time("%a, %d %b %Y %H:%M:%S %Z")).c_str());
+        
         clean_channel(eventloop);
+        // sleep(10);
     }
 } 
 

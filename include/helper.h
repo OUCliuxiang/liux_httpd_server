@@ -2,6 +2,7 @@
 #define __HELPER_H__
 
 #include <string>
+#include <time.h>
 
 using std::string;
 
@@ -11,7 +12,7 @@ namespace Helper
     //
     // 读取一行数据
     //
-    int readline(int fd, char *buf, int size);
+    ssize_t readline(int fd, char *buf, int size);
     
     //
     // 当前日期字符串
@@ -37,6 +38,9 @@ namespace Helper
 
     // 计时器
     int timerfd_create(int second);
+    
+    string now_time(const char* format);
+    
 }
 
 #endif

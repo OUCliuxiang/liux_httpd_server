@@ -55,7 +55,7 @@ public:
     inline void set_path(const char* start, const char* end) {
         path.assign(start, end);
     }
-    inline const std::string& get_path() const {
+    inline const std::string get_path() const {
         return path;
     }
 
@@ -67,7 +67,7 @@ public:
     }
 
     void add_header(const char* start, const char* end);
-    const std::string& get_header(const std::string& key) const;
+    const std::string get_header(const std::string& key) const;
 
     inline void append_to_body(const std::string& content) {
         body.append(content);

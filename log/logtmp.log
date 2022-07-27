@@ -1,90 +1,48 @@
-20220724|17:10:58|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:10:58|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:10:58|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:10:58|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:10:58|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:10:59|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:10:59|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:10:59|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:10:59|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:10:59|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:00|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:00|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:00|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:00|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:00|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:01|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:01|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:01|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:01|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:01|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:02|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:02|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:02|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:02|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:02|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:03|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:03|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:03|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:03|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:03|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:04|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:04|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:04|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:04|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:04|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:05|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:05|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:05|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:05|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:05|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:06|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:06|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:06|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:06|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:06|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:07|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:07|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:07|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:07|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:07|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:08|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:08|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:08|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:08|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:08|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:09|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:09|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:09|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:09|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:09|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:10|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:10|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:10|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:10|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:10|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:11|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:11|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:11|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:11|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:11|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:12|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:12|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:12|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:12|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:12|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:13|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:13|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:13|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:13|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:13|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:14|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:14|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:14|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:14|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:14|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
-20220724|17:11:15|281473746039248|ERROR|error_test|/root/liux_httpd_server/test/test_log.cpp:45|
-20220724|17:11:15|281473754431952|WARN|warn_test|/root/liux_httpd_server/test/test_log.cpp:38|
-20220724|17:11:15|281473762824656|INFO|info_test|/root/liux_httpd_server/test/test_log.cpp:31|
-20220724|17:11:15|281473771217360|DEBUG|debug_test|/root/liux_httpd_server/test/test_log.cpp:24|
-20220724|17:11:15|281473779610064|TRACE|trace_test|/root/liux_httpd_server/test/test_log.cpp:17|
+20220726|15:14:37|281473383731216|TRACE|chanel add to EventLoop: 3|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:37|281473383731216|TRACE|chanel add to EventLoop: 3|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:37|281473383731216|TRACE|chanel add to EventLoop: 3|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:37|281473383731216|TRACE|chanel add to EventLoop: 3|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:37|281473350148560|INFO|new connection: 9 : 211.64.159.25:51929|/root/liux_httpd_server/src/tcp.cpp:153|
+20220726|15:14:37|281473350148560|TRACE|chanel add to EventLoop: 9|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:37|281473350148560|TRACE|chanel add to EventLoop: 10|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:37|281473358541264|INFO|new connection: 12 : 255.255.0.0:40844|/root/liux_httpd_server/src/tcp.cpp:153|
+20220726|15:14:37|281473358541264|TRACE|chanel add to EventLoop: 12|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:37|281473358541264|TRACE|chanel add to EventLoop: 13|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:37|281473358541264|INFO|new request: 12|/root/liux_httpd_server/src/tcp.cpp:72|
+20220726|15:14:37|281473358541264|INFO|message received: work|/root/liux_httpd_server/src/http.cpp:35|
+20220726|15:14:37|281473350148560|INFO|new connection: 15 : 255.255.0.0:40716|/root/liux_httpd_server/src/tcp.cpp:153|
+20220726|15:14:37|281473350148560|TRACE|chanel add to EventLoop: 15|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:37|281473350148560|TRACE|chanel add to EventLoop: 16|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:38|281473350148560|INFO|new request: 9|/root/liux_httpd_server/src/tcp.cpp:72|
+20220726|15:14:38|281473350148560|INFO|message received: GET / HTTP/1.1
+|/root/liux_httpd_server/src/http.cpp:35|
+20220726|15:14:44|281473350148560|INFO|new request: 9|/root/liux_httpd_server/src/tcp.cpp:72|
+20220726|15:14:44|281473350148560|INFO|message received: 
+|/root/liux_httpd_server/src/http.cpp:35|
+20220726|15:14:44|281473375326672|INFO|new connection: 19 : 255.255.0.0:41100|/root/liux_httpd_server/src/tcp.cpp:153|
+20220726|15:14:44|281473375326672|TRACE|chanel add to EventLoop: 19|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:44|281473375326672|TRACE|chanel add to EventLoop: 20|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:48|281473375326672|INFO|new connection: 22 : 211.64.159.25:27864|/root/liux_httpd_server/src/tcp.cpp:153|
+20220726|15:14:48|281473375326672|TRACE|chanel add to EventLoop: 22|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:48|281473375326672|TRACE|chanel add to EventLoop: 23|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:48|281473375326672|INFO|new connection: 26 : 211.64.159.25:28376|/root/liux_httpd_server/src/tcp.cpp:153|
+20220726|15:14:48|281473375326672|TRACE|chanel add to EventLoop: 26|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:48|281473375326672|TRACE|chanel add to EventLoop: 27|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:48|281473375326672|INFO|new request: 26|/root/liux_httpd_server/src/tcp.cpp:72|
+20220726|15:14:48|281473375326672|INFO|message received: GET / HTTP/1.1
+|/root/liux_httpd_server/src/http.cpp:35|
+20220726|15:14:52|281473375326672|INFO|new request: 26|/root/liux_httpd_server/src/tcp.cpp:72|
+20220726|15:14:52|281473375326672|INFO|message received: 
+|/root/liux_httpd_server/src/http.cpp:35|
+20220726|15:14:53|281473366933968|INFO|new connection: 30 : 255.255.0.0:40972|/root/liux_httpd_server/src/tcp.cpp:153|
+20220726|15:14:53|281473366933968|TRACE|chanel add to EventLoop: 30|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:53|281473366933968|TRACE|chanel add to EventLoop: 31|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:53|281473366933968|INFO|new connection: 33 : 211.64.159.25:29400|/root/liux_httpd_server/src/tcp.cpp:153|
+20220726|15:14:53|281473366933968|TRACE|chanel add to EventLoop: 33|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:53|281473366933968|TRACE|chanel add to EventLoop: 34|/root/liux_httpd_server/src/eventloop.cpp:13|
+20220726|15:14:53|281473366933968|INFO|new request: 33|/root/liux_httpd_server/src/tcp.cpp:72|
+20220726|15:14:53|281473366933968|INFO|message received: GET / HTTP/1.1
+|/root/liux_httpd_server/src/http.cpp:35|
+20220726|15:14:53|281473366933968|INFO|new request: 33|/root/liux_httpd_server/src/tcp.cpp:72|
+20220726|15:14:53|281473366933968|INFO|message received: 
+|/root/liux_httpd_server/src/http.cpp:35|

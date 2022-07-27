@@ -63,78 +63,40 @@ CMAKE_SOURCE_DIR = /root/liux_httpd_server
 CMAKE_BINARY_DIR = /root/liux_httpd_server/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Target rules for target CMakeFiles/maind.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: CMakeFiles/liux_http.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/liux_log.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/liux_tcp.dir/all
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/liux_httpd_server/build/CMakeFiles --progress-num=16,17 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/maind.dir/all: CMakeFiles/liux_tcp.dir/all
+CMakeFiles/maind.dir/all: CMakeFiles/liux_log.dir/all
+	$(MAKE) -f CMakeFiles/maind.dir/build.make CMakeFiles/maind.dir/depend
+	$(MAKE) -f CMakeFiles/maind.dir/build.make CMakeFiles/maind.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/liux_httpd_server/build/CMakeFiles --progress-num=9,10 "Built target maind"
+.PHONY : CMakeFiles/maind.dir/all
 
 # Include target in all.
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/maind.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/liux_httpd_server/build/CMakeFiles 17
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+CMakeFiles/maind.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/liux_httpd_server/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/maind.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/liux_httpd_server/build/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : CMakeFiles/maind.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
+maind: CMakeFiles/maind.dir/rule
 
-.PHONY : main
-
-# clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+.PHONY : maind
 
 # clean rule for target.
-clean: CMakeFiles/main.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/liux_http.dir
-
-# All Build rule for target.
-CMakeFiles/liux_http.dir/all:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/depend
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/liux_httpd_server/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target liux_http"
-.PHONY : CMakeFiles/liux_http.dir/all
-
-# Include target in all.
-all: CMakeFiles/liux_http.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/liux_http.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/liux_httpd_server/build/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/liux_http.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/liux_httpd_server/build/CMakeFiles 0
-.PHONY : CMakeFiles/liux_http.dir/rule
-
-# Convenience name for target.
-liux_http: CMakeFiles/liux_http.dir/rule
-
-.PHONY : liux_http
+CMakeFiles/maind.dir/clean:
+	$(MAKE) -f CMakeFiles/maind.dir/build.make CMakeFiles/maind.dir/clean
+.PHONY : CMakeFiles/maind.dir/clean
 
 # clean rule for target.
-CMakeFiles/liux_http.dir/clean:
-	$(MAKE) -f CMakeFiles/liux_http.dir/build.make CMakeFiles/liux_http.dir/clean
-.PHONY : CMakeFiles/liux_http.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/liux_http.dir/clean
+clean: CMakeFiles/maind.dir/clean
 
 .PHONY : clean
 
@@ -145,7 +107,7 @@ clean: CMakeFiles/liux_http.dir/clean
 CMakeFiles/liux_log.dir/all:
 	$(MAKE) -f CMakeFiles/liux_log.dir/build.make CMakeFiles/liux_log.dir/depend
 	$(MAKE) -f CMakeFiles/liux_log.dir/build.make CMakeFiles/liux_log.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/liux_httpd_server/build/CMakeFiles --progress-num=8,9,10 "Built target liux_log"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/liux_httpd_server/build/CMakeFiles --progress-num=1,2,3 "Built target liux_log"
 .PHONY : CMakeFiles/liux_log.dir/all
 
 # Include target in all.
@@ -182,7 +144,7 @@ clean: CMakeFiles/liux_log.dir/clean
 CMakeFiles/liux_tcp.dir/all:
 	$(MAKE) -f CMakeFiles/liux_tcp.dir/build.make CMakeFiles/liux_tcp.dir/depend
 	$(MAKE) -f CMakeFiles/liux_tcp.dir/build.make CMakeFiles/liux_tcp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/liux_httpd_server/build/CMakeFiles --progress-num=11,12,13,14,15 "Built target liux_tcp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/liux_httpd_server/build/CMakeFiles --progress-num=4,5,6,7,8 "Built target liux_tcp"
 .PHONY : CMakeFiles/liux_tcp.dir/all
 
 # Include target in all.

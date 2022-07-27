@@ -21,10 +21,6 @@ CMakeFiles/liux_tcp.dir/src/tcp.cpp.o
  ../include/channel.h
  ../include/eventloop.h
  ../include/helper.h
- ../include/http.h
- ../include/httpbase.h
- ../include/httprequest.h
- ../include/httpresponse.h
  ../include/logger.h
  ../include/tcp.h
  /root/liux_httpd_server/src/tcp.cpp

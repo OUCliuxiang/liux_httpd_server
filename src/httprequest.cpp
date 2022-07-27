@@ -29,7 +29,7 @@ void HttpRequest::add_header(const char* start, const char* end) {
     headers[key] = value;
 }
 
-const std::string& HttpRequest::get_header(const std::string& key) const {
+const std::string HttpRequest::get_header(const std::string& key) const {
     std::string result;
     auto it = headers.find(key);
     if (it != headers.end())

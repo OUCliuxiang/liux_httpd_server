@@ -41,32 +41,35 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 # 生成动态链接库
 add_library(liux_log SHARED 
             src/logger.cpp 
-            src/helper.cpp)
+            src/helper.cpp
+            )
 add_library(liux_tcp SHARED 
             src/tcp.cpp 
             src/logger.cpp 
             src/helper.cpp 
-            src/eventloop.cpp)
-add_library(liux_http SHARED 
-            src/http.cpp 
-            src/httpbase.cpp 
-            src/httprequest.cpp 
-            src/httpresponse 
-            src/logger.cpp 
-            src/helper.cpp)
+            src/eventloop.cpp
+            )
+# add_library(liux_http SHARED 
+#             src/http.cpp 
+#             src/httpbase.cpp 
+#             src/httprequest.cpp 
+#             src/httpresponse 
+#             src/logger.cpp 
+#             src/helper.cpp
+#             )
 
 set(LIBS 
     liux_log
     liux_tcp
-    liux_http
+    # liux_http
     pthread
     )
 
 # add_executable(test_log test/test_log.cpp)      # 生成 test 测试文件 可执行文件
 # target_link_libraries(test_log ${LIBS})       # 将可执行文件 test_log 和头文件库文件连接起来    
 
-add_executable(main main.cpp)      # 生成 test 测试文件 可执行文件
-target_link_libraries(main ${LIBS})       # 将可执行文件 test_log 和头文件库文件连接起来    
+add_executable(maind main.cpp)      # 生成 test 测试文件 可执行文件
+target_link_libraries(maind ${LIBS})       # 将可执行文件 test_log 和头文件库文件连接起来    
 
 # add_executable(test_thread tests/test_thread.cpp)      # 生成 test 测试文件 可执行文件
 # target_link_libraries(test_thread ${LIBS})       # 将可执行文件 test_thread 和头文件库文件连接起来    

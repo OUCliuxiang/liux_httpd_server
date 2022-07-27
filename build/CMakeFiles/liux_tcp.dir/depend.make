@@ -20,10 +20,6 @@ CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/blockingqueue.h
 CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/channel.h
 CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/eventloop.h
 CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/helper.h
-CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/http.h
-CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/httpbase.h
-CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/httprequest.h
-CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/httpresponse.h
 CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/logger.h
 CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../include/tcp.h
 CMakeFiles/liux_tcp.dir/src/tcp.cpp.o: ../src/tcp.cpp

@@ -72,6 +72,8 @@ private:
 
     int sockfd;
 
+    std::string iomulti;
+
     std::mutex mutex;
     std::vector<EventLoop::ptr> eventloops;
     std::map<EventLoop::ptr, std::list<Channel::ptr>> closing_list;

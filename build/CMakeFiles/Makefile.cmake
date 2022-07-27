@@ -42,8 +42,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/main.dir/DependInfo.cmake"
-  "CMakeFiles/liux_http.dir/DependInfo.cmake"
+  "CMakeFiles/maind.dir/DependInfo.cmake"
   "CMakeFiles/liux_log.dir/DependInfo.cmake"
   "CMakeFiles/liux_tcp.dir/DependInfo.cmake"
   )

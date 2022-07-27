@@ -50,8 +50,9 @@ void Select::loop() {
 
     // 事件处理 并清空 channel_list
     for (auto& channel: channel_list) channel -> handle_event();
-    ChannelList tmp;
-    channel_list.swap(tmp);
+    printf("sizeof channel_list: %d\n", (int)channel_list.size());
+    ChannelList().swap(channel_list);
+    printf("sizeof channel_list: %d\n", (int)channel_list.size());
 }
 
 void Poll::loop() {

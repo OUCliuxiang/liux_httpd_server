@@ -31,7 +31,7 @@ public:
     void send_response();
 
     // 资源的绝对路径
-    const std::string& absolute_path();
+    const std::string absolute_path();
 
     // 判断请求的是否是目录文件，必须在 path_not_found 之后调用
     bool is_directory(const std::string& path);
